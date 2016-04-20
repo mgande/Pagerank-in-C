@@ -93,7 +93,7 @@ int main(int argc, char **argv) {
 		if(succ > num_vertices)
 			num_vertices = succ;
 
-		if(num_vertices > v_size-1) {
+		while(num_vertices > v_size-1) {
 			v_size = v_size*2;
 			if(!(vertices = (Vertex *) realloc(vertices, v_size*sizeof(Vertex)))) {
 				puts("Out of memory for the graph vertices.");
